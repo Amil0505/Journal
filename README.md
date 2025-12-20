@@ -9,4 +9,4 @@
 
 | フォルダ名 | 説明 | 論文URL |
 |:-------|:--------|:-------|
-|Atacicept|IgA腎症に対する新規薬剤の第三相試験||
+|Atacicept|IgA腎症に対する新規薬剤の第三相試験|https://www.nejm.org/doi/full/10.1056/NEJMoa2510198|
