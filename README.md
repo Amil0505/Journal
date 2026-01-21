@@ -8,6 +8,6 @@
 ------------------------------------
 ### 各フォルダの詳細
 
-| フォルダ名 | 説明 | 論文URL | 備考 | キーワード|
-|:-------|:-------|:-------|:-------|:------|
-|Atacicept|IgA腎症に対する新規薬剤の第三相試験試|https://www.nejm.org/doi/full/10.1056/NEJMoa25101989|主に中間事象関連をまとめています|MMRM, Jump to Reference, Tipping Point Analysis|
+| フォルダ名 | 説明 | 備考 | キーワード|
+|:-------|:-------|:-------|:------|
+|Atacicept|IgA腎症に対する新規薬剤の第三相試験試|主に中間事象関連をまとめています|MMRM, Jump to Reference, Tipping Point Analysis|
