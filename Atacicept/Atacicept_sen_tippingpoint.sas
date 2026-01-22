@@ -201,14 +201,25 @@ proc mianalyze data=all_estimates_sort;
 run;
 /*シフトパラメータ13×13=169レコードのデータセット*/
 
-/*有意か非有意のフラグ作成*/
-data TP_results2;
-    set TP_results;
-    if Probt < 0.05 then Sig = 1;
-    else Sig = 0;
+ods select all;
+proc report data = TP_results;
+	column k1_val k2_val Estimate LCLMean UCLMean Probt;
+	define k1_val / display;
+	define k2_val / display;
+	define Estimate / display;
+	define LCLMean / display;
+	define UCLMean / display;
+	define Probt / display;
+
+	/*効果が小さくなる(群間差が0に近くなる)場合のシフトパラメータを確認するために便宜的に-28.5より大きいものを色付け*/
+	compute Estimate;
+		if Estimate > -28.5 then call define(_ROW_,"style","style = [color = blue]");
+	endcomp;
 run;
+
 
 /*
 今回のシフトパラメータの範囲では全て有意でした。
 実務上は、有意ではなくなった点を参考に臨床的な観点などから検討を行っていくことになるかと思います。
+また、k1がプラセボ群/k2が実薬群のシフトパラメータなので、k1のシフトパラメータが小さいかつk2のシフトパラメータが大きい場合に、(少しですが)効果が小さくなっていることが確認できます。
 */
